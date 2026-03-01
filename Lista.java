@@ -47,6 +47,25 @@ public void aggiungiiPosiz(T dato,int posizione){
     }
 
 }
-   
+   public   T LeggiTest(){
+    if(head==null){
+        throw new NoSuchElementException("Lista vuota");
+
+    }
+    T dato InTest=head.dato;
+   }
+   public  T LeggiPos(int pos){
+    if(pos<0){
+        throw new IndexOutOfBoundsException(" posizione negativa");
+
+    }
+    Nodo<T> curr= head;
+    int currPos=0;
+    while(currPos<pos){
+        curr=curr.next;
+        currPos++;
+    }
+    return curr.dato
+   }
 
 }
